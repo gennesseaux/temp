@@ -1,6 +1,8 @@
+# Exercice 1 
+dir 'C:\Program Files (x86)' -Recurse -Include *.png, *.jpg, *.gif |
+    Measure-Object -Property Length -Sum -Average -Minimum -Maximum
 
-
-#
+# Exercice 2
 [int]$running = 0
 [int]$stopped = 0
 [int]$undef = 0
