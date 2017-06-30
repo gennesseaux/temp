@@ -1,6 +1,6 @@
 #requires -version 4
 
-cls
+Clear-Host
 
     #$encoding = [system.Text.Encoding]::UTF8
 
@@ -55,7 +55,7 @@ if($user -eq $null) {
     Add-ADGroupMember -Identity $GroupeName -Members $Login
 }
 else {
-    $member = Get-ADGroupMember -Identity $GroupeName | where {$_.SamAccountName -eq $Login}
+    $member = Get-ADGroupMember -Identity $GroupeName | Where-Object {$_.SamAccountName -eq $Login}
     if($member -eq $null) {
         Add-ADGroupMember -Identity $GroupeName -Members $Login
     }
